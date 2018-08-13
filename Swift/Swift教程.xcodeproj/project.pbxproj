@@ -39,6 +39,9 @@
 		2A628E76210EE93E0005373C /* Project06-cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A628E75210EE93E0005373C /* Project06-cell.swift */; };
 		2A628E78210F01970005373C /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A628E77210F01970005373C /* Kingfisher.framework */; };
 		2A628E7A211001B10005373C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A628E79211001B10005373C /* SwiftyJSON.framework */; };
+		2A724A98212118B4002B3BAE /* Project05-AlamofireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A724A97212118B4002B3BAE /* Project05-AlamofireVC.swift */; };
+		2A724A9A212118E2002B3BAE /* Project06-NetworkRequesrVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A724A99212118E2002B3BAE /* Project06-NetworkRequesrVC.swift */; };
+		2A724A9C212118FC002B3BAE /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A724A9B212118FC002B3BAE /* NetWorkManager.swift */; };
 		2A7B247720FF33A200941127 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7B247620FF33A200941127 /* SDWebImage.framework */; };
 		2A7B247B21003D3A00941127 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7B247A21003D3A00941127 /* SnapKit.framework */; };
 		2A7B247D2101741B00941127 /* Project02-CustomFontVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7B247C2101741B00941127 /* Project02-CustomFontVC.swift */; };
@@ -58,9 +61,6 @@
 		2A7D1F7C2106BF2C00003645 /* ThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D1F7B2106BF2C00003645 /* ThreadViewController.swift */; };
 		2A7D1F7E2107134000003645 /* Project04-PictureScrollerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D1F7D2107134000003645 /* Project04-PictureScrollerVC.swift */; };
 		2A7D1F812108171100003645 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7D1F802108171100003645 /* Alamofire.framework */; };
-		2A7D1F832108280400003645 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D1F822108280400003645 /* NetWorkManager.swift */; };
-		2A7D1F8921082B9900003645 /* Project05-AlamofireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D1F8821082B9900003645 /* Project05-AlamofireVC.swift */; };
-		2A7D1F8B210AC18C00003645 /* Project06-NetworkRequesrVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D1F8A210AC18C00003645 /* Project06-NetworkRequesrVC.swift */; };
 		2ACA7FCB20FEEA570015D5C6 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA7FCA20FEEA570015D5C6 /* File.swift */; };
 		2AE6E8EA20FC9B61003FCD58 /* Project01-SimpleStopWatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6E8E920FC9B61003FCD58 /* Project01-SimpleStopWatchVC.swift */; };
 		9200FB83B3A050ADA5A15D5E /* Pods_Swift__Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6964156636CD1F549B3CE3A1 /* Pods_Swift__Tests.framework */; };
@@ -121,6 +121,9 @@
 		2A628E75210EE93E0005373C /* Project06-cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project06-cell.swift"; sourceTree = "<group>"; };
 		2A628E77210F01970005373C /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A628E79211001B10005373C /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A724A97212118B4002B3BAE /* Project05-AlamofireVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project05-AlamofireVC.swift"; sourceTree = "<group>"; };
+		2A724A99212118E2002B3BAE /* Project06-NetworkRequesrVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project06-NetworkRequesrVC.swift"; sourceTree = "<group>"; };
+		2A724A9B212118FC002B3BAE /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
 		2A7B247620FF33A200941127 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7B24782100250A00941127 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A7B247A21003D3A00941127 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -340,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				2A7D1F822108280400003645 /* NetWorkManager.swift */,
+				2A724A9B212118FC002B3BAE /* NetWorkManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -352,7 +356,9 @@
 				2A7B248B2101B0AF00941127 /* Project03-PlayLocalVedioVC.swift */,
 				2A7D1F7D2107134000003645 /* Project04-PictureScrollerVC.swift */,
 				2A7D1F8821082B9900003645 /* Project05-AlamofireVC.swift */,
+				2A724A97212118B4002B3BAE /* Project05-AlamofireVC.swift */,
 				2A7D1F8A210AC18C00003645 /* Project06-NetworkRequesrVC.swift */,
+				2A724A99212118E2002B3BAE /* Project06-NetworkRequesrVC.swift */,
 				2A255CE8211C3B8A00E58818 /* Project07-PickerViewVC.swift */,
 				2A7B248A210182FD00941127 /* view */,
 			);
@@ -626,13 +632,12 @@
 				2A4EF0F720F5A8C700C834B9 /* InheritViewController.swift in Sources */,
 				2A7B24922101CAD300941127 /* Project03-Cell.swift in Sources */,
 				2A255CEB211D78F300E58818 /* PickerView.swift in Sources */,
-				2A7D1F832108280400003645 /* NetWorkManager.swift in Sources */,
 				2A4EF0F520F361F000C834B9 /* ClassAndStructViewController.swift in Sources */,
 				2A7D1F6F2105BD9800003645 /* BaseViewController.swift in Sources */,
 				2A4177D520EB1EEB0094D236 /* Swift_ViewController3.swift in Sources */,
 				2A7B247F2101811200941127 /* Project02-Cell.swift in Sources */,
 				2A7D1F7A2105CA9D00003645 /* UIColor+Hex.swift in Sources */,
-				2A7D1F8B210AC18C00003645 /* Project06-NetworkRequesrVC.swift in Sources */,
+				2A724A9A212118E2002B3BAE /* Project06-NetworkRequesrVC.swift in Sources */,
 				2A4177CF20EB10980094D236 /* Swift_ViewController1.swift in Sources */,
 				2A176ADE20EF10D60082271E /* SetViewController.swift in Sources */,
 				2A7B248C2101B0AF00941127 /* Project03-PlayLocalVedioVC.swift in Sources */,
@@ -643,13 +648,14 @@
 				2A7D1F7C2106BF2C00003645 /* ThreadViewController.swift in Sources */,
 				2A255CE9211C3B8A00E58818 /* Project07-PickerViewVC.swift in Sources */,
 				2A176AE020EF45F00082271E /* FuncViewController.swift in Sources */,
-				2A7D1F8921082B9900003645 /* Project05-AlamofireVC.swift in Sources */,
 				2A7D1F732105BDDA00003645 /* BaseTableViewCell.swift in Sources */,
 				2ACA7FCB20FEEA570015D5C6 /* File.swift in Sources */,
+				2A724A98212118B4002B3BAE /* Project05-AlamofireVC.swift in Sources */,
 				2A628E72210EE4860005373C /* BaseModel.swift in Sources */,
 				2A628E74210EE50C0005373C /* NewsModel.swift in Sources */,
 				2A7D1F7E2107134000003645 /* Project04-PictureScrollerVC.swift in Sources */,
 				2A4EF0F320F345E300C834B9 /* EnumViewController.swift in Sources */,
+				2A724A9C212118FC002B3BAE /* NetWorkManager.swift in Sources */,
 				2AE6E8EA20FC9B61003FCD58 /* Project01-SimpleStopWatchVC.swift in Sources */,
 				2A4177D320EB1EDD0094D236 /* Swift_ViewController2.swift in Sources */,
 				2A4EF0F920F885C600C834B9 /* ARCViewController.swift in Sources */,

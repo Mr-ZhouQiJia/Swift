@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DDService.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>52AD64C25BB41223E2D6D4C4C98A232227BF47D0</string>
+				<key>dateExpires</key>
+				<string>2019/5/28</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>AL8Z95Q4JM.com.ddsoucai.service</string>
+				<key>aps-environment</key>
+				<string>production</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>AL8Z95Q4JM</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>DDService.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>ae8fd6bf-e2d0-4449-91f4-b22227f30d79</string>
+				<key>name</key>
+				<string>ddservice_adhoc_813</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>AL8Z95Q4JM</string>
+				<key>name</key>
+				<string>Zhejiang Jinmaisui Network Technology Co., Ltd</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
