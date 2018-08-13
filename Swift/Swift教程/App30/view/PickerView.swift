@@ -13,7 +13,7 @@ class PickerView: UIView,UIPickerViewDataSource,UIPickerViewDelegate{
     
     
     var pickerView : UIPickerView?
-    
+    var bgView : UIView?
     
     
     
@@ -21,11 +21,17 @@ class PickerView: UIView,UIPickerViewDataSource,UIPickerViewDelegate{
         
         super.init(frame: frame)
         
+        self.bgView = UIView(frame: CGRect(x: 0, y: 0, width: AppWidth, height: AppHeight))
+        
         self.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.3)
         self.frame = CGRect(x: 0, y: 0, width: AppWidth, height: AppHeight)
         
         self.pickerView = UIPickerView(frame: CGRect(x: 0, y: AppHeight - 300, width: AppWidth, height: 300))
-        self.addSubview(self.pickerView!)
+        self.pickerView?.backgroundColor = UIColor.white
+        self.pickerView?.dataSource = self
+        self.pickerView?.delegate = self
+        self.addSubview(self.bgView!)
+        self.bgView?.addSubview(self.pickerView!)
         
         
         
