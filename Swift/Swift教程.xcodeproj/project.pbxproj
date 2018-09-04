@@ -61,6 +61,7 @@
 		2A7D1F7C2106BF2C00003645 /* ThreadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D1F7B2106BF2C00003645 /* ThreadViewController.swift */; };
 		2A7D1F7E2107134000003645 /* Project04-PictureScrollerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7D1F7D2107134000003645 /* Project04-PictureScrollerVC.swift */; };
 		2A7D1F812108171100003645 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7D1F802108171100003645 /* Alamofire.framework */; };
+		2A8B2D1D2137C85A00B26C30 /* Project08-AnimationOfVpnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8B2D1C2137C85A00B26C30 /* Project08-AnimationOfVpnVC.swift */; };
 		2AADBF2421226C5D00FE1F1F /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AADBF2321226C5D00FE1F1F /* area.plist */; };
 		2ACA7FCB20FEEA570015D5C6 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACA7FCA20FEEA570015D5C6 /* File.swift */; };
 		2AE6E8EA20FC9B61003FCD58 /* Project01-SimpleStopWatchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE6E8E920FC9B61003FCD58 /* Project01-SimpleStopWatchVC.swift */; };
@@ -148,6 +149,7 @@
 		2A7D1F822108280400003645 /* NetWorkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetWorkManager.swift; path = ../../../../Documents/NetWorkManager.swift; sourceTree = "<group>"; };
 		2A7D1F8821082B9900003645 /* Project05-AlamofireVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Project05-AlamofireVC.swift"; path = "../../../../Documents/Project05-AlamofireVC.swift"; sourceTree = "<group>"; };
 		2A7D1F8A210AC18C00003645 /* Project06-NetworkRequesrVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Project06-NetworkRequesrVC.swift"; path = "../../../../Documents/Project06-NetworkRequesrVC.swift"; sourceTree = "<group>"; };
+		2A8B2D1C2137C85A00B26C30 /* Project08-AnimationOfVpnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project08-AnimationOfVpnVC.swift"; sourceTree = "<group>"; };
 		2AADBF2321226C5D00FE1F1F /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
 		2ACA7FCA20FEEA570015D5C6 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		2ACA7FCC20FF2BD80015D5C6 /* Masonry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Masonry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -363,6 +365,7 @@
 				2A7D1F8A210AC18C00003645 /* Project06-NetworkRequesrVC.swift */,
 				2A724A99212118E2002B3BAE /* Project06-NetworkRequesrVC.swift */,
 				2A255CE8211C3B8A00E58818 /* Project07-PickerViewVC.swift */,
+				2A8B2D1C2137C85A00B26C30 /* Project08-AnimationOfVpnVC.swift */,
 				2A7B248A210182FD00941127 /* view */,
 			);
 			path = App30;
@@ -630,6 +633,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A8B2D1D2137C85A00B26C30 /* Project08-AnimationOfVpnVC.swift in Sources */,
 				2A7D1F752105C41E00003645 /* BaseNavigationController.swift in Sources */,
 				2A176AD920EC62AA0082271E /* Swift_BasicVC.swift in Sources */,
 				2A176ADC20EE0FAB0082271E /* StringAndCharVC.swift in Sources */,

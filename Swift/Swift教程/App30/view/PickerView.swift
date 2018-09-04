@@ -50,16 +50,16 @@ class PickerView: UIView,UIPickerViewDataSource,UIPickerViewDelegate{
         
         
         let allArray = NSArray(contentsOfFile: Bundle.main.path(forResource: "area", ofType: "plist")!) 
-       
-        /*
-        for dic : Dictionary<String , AnyObject> in allArray! {
-            
-            self.provinceArray.append(dic.keys.first!)
-        }
-    */
-     
-    
-            
+        
+//
+//        for dic : Dictionary<String , AnyObject> in allArray {
+//
+//            self.provinceArray.append(dic.keys.first!)
+//        }
+//        
+        
+        
+        
         
         
         
