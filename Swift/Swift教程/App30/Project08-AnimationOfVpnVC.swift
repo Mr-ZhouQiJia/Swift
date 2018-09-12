@@ -13,71 +13,17 @@ class Project08_AnimationOfVpnVC: BaseViewController , UITableViewDelegate , UIT
     var tableView : UITableView?
     var image : UIImageView?
     var angle = 0.0
+    var headerView : UIView?
+    var label : UILabel?
+    var button : UIButton?
+    var backImage : UIImageView?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: AppWidth, height: AppHeight), style: UITableViewStyle.plain)
-        self.view.addSubview(self.tableView!)
-        self.tableView?.delegate = self
-        self.tableView?.dataSource = self
-        self.tableView?.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
+        buildNavi()
+        buildTableView()
         createHeaderView()
-    }
-
-    //创建头部视图
-    func createHeaderView() {
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: AppWidth, height: 200))
-        headerView.backgroundColor = UIColor(red: 98/255.0, green: 197/255.0, blue: 248/255.0, alpha: 1.0)
-        //图片
-        image = UIImageView(image: UIImage.init(named: "123.jpg"))
-        headerView.addSubview(image!)
-        image!.snp.makeConstraints { (make) in
-            make.centerX.equalTo(headerView)
-            make.top.equalTo(headerView).offset(50)
-            make.height.width.equalTo(60)
-        }
-        image!.layer.masksToBounds = true
-        image!.layer.cornerRadius = 30;
-        
-        
-        
-        
-        let label = UILabel()
-        headerView.addSubview(label)
-        label.text = "SwiftSwiftSwift"
-        label.textColor = UIColor.white
-        label.textAlignment = NSTextAlignment.center
-        label.snp.makeConstraints { (make) in
-            make.top.equalTo(image!.snp.bottom).offset(10)
-            make.centerX.equalTo(image!)
-            make.width.equalTo(150)
-            make.height.equalTo(30)
-        }
-        
-        let button = UIButton.init(type: UIButtonType.custom)
-        button.setTitle("连接", for: UIControlState.normal)
-       // button.backgroundColor = UIColor.white
-        button.titleLabel?.textColor = UIColor.red
-        button.layer.masksToBounds = true
-        button.layer.cornerRadius = 5
-        headerView.addSubview(button)
-        button.snp.makeConstraints { (make) in
-            make.top.equalTo(label.snp.bottom).offset(10)
-            make.width.equalTo(70)
-            make.height.equalTo(30)
-            make.centerX.equalTo(image!)
-        }
-        
-        startAnimation()
-        
-        
-        
-        
-        
-        
-        
-        self.tableView?.tableHeaderView = headerView
     }
     
     func startAnimation()  {
@@ -91,43 +37,148 @@ class Project08_AnimationOfVpnVC: BaseViewController , UITableViewDelegate , UIT
 //            print(self.angle)
 //            self.startAnimation()
 //        }
-        let animation = <#value#>
+        //创建旋转动画
+        let animation = CABasicAnimation(keyPath: "transform.rotation.z")
         
-
-
+        //旋转角度
+        animation.toValue = 2.0 * Double.pi
+        
+        //旋转角度需要的时间
+        animation.duration = 5
+        
+        //旋转重发次数
+        animation.repeatCount = MAXFLOAT
+        
+        //动画执行完后不移除
+        animation.isRemovedOnCompletion = true
+        
+        //累加旋转角度
+        animation.isCumulative = true
+        
+        //将动画添加到视图的layer上
+        image?.layer.add(animation, forKey: "rotationAnimation")
+        
+        //取消动画
+       // view.layer.removeAllAnimations()
+        
+//        UIView.animate(withDuration: 5) {
+//            self.image?.transform = (self.image?.transform.rotated(by: CGFloat(Double.pi)))!
+//        }
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        
-        cell.textLabel?.text = "来试一下啊!"
-        
-        return cell
-        
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "progressCell", for: indexPath) as! ProgressCell
+       // cell.backgroundColor = .red
+        //cell.textLabel?.text = "来试一下啊!"
+       // cell.progressView?.progressBackColor = UIColor.gray
+       // cell.progressView?.progressViewColor = UIColor.red
+       // cell.progressView?.progressValue = 0.8
+        return cell
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.y)
+        //print((image?.frame.origin.y)! - scrollView.contentOffset.y)
+        
+        var imageX = image?.frame.origin.x
+       // imageX = scrollView.contentOffset.y
+       // image?.frame = CGRect(x: <#T##CGFloat#>, y: <#T##CGFloat#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
+        
+       label?.center.y = 155.0 + scrollView.contentOffset.y
+        print(label?.frame as Any)
+    }
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+
+extension Project08_AnimationOfVpnVC {
+    
+    func buildNavi()  {
+        let leftItem = UIBarButtonItem(image: "火.png", highLightImage: "火(1)", size: CGSize(width: 40, height: 40))
+        self.navigationItem.leftBarButtonItem = leftItem
+    }
+    
+    func buildTableView()  {
+        self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: AppWidth, height: AppHeight), style: UITableViewStyle.plain)
+        self.view.addSubview(self.tableView!)
+        self.tableView?.delegate = self
+        self.tableView?.dataSource = self
+        // self.tableView?.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
+        self.tableView?.register(ProgressCell.classForCoder(), forCellReuseIdentifier: "progressCell")
+    }
+    //创建头部视图
+    func createHeaderView() {
+        headerView = UIView(frame: CGRect(x: 0, y: 0, width: AppWidth, height: 240))
+        
+        backImage = UIImageView(frame: CGRect(x: 0, y: 0, width: AppWidth, height: 240))
+        backImage?.image = UIImage(named: "timg.jpg")
+        
+        headerView?.backgroundColor = UIColor(red: 98/255.0, green: 197/255.0, blue: 248/255.0, alpha: 1.0)
+        //图片
+        image = UIImageView(image: UIImage.init(named: "123.jpg"))
+        headerView?.addSubview(image!)
+        image!.snp.makeConstraints { (make) in
+            make.centerX.equalTo(headerView!)
+            make.top.equalTo(headerView!).offset(50)
+            make.height.width.equalTo(80)
+        }
+        image!.layer.masksToBounds = true
+        image!.layer.cornerRadius = 40;
+        
+        
+        
+        
+        label = UILabel()
+        headerView?.addSubview(label!)
+        label?.text = "SwiftSwift"
+        label?.textColor = UIColor.white
+        label?.textAlignment = NSTextAlignment.center
+        label?.snp.makeConstraints { (make) in
+            make.top.equalTo(image!.snp.bottom).offset(10)
+            make.centerX.equalTo(image!)
+            make.width.equalTo(150)
+            make.height.equalTo(30)
+        }
+        
+        button = UIButton.init(type: UIButtonType.system)
+        button?.setTitle("连接", for: UIControlState.normal)
+        button?.backgroundColor = UIColor.white
+        button?.titleLabel?.textColor = UIColor.blue
+        button?.layer.masksToBounds = true
+        button?.layer.cornerRadius = 5
+        headerView?.addSubview(button!)
+        button?.snp.makeConstraints { (make) in
+            make.top.equalTo(label!.snp.bottom).offset(10)
+            make.width.equalTo(200)
+            make.height.equalTo(30)
+            make.centerX.equalTo(image!)
+        }
+        
+        startAnimation()
+        self.tableView?.tableHeaderView = headerView
+    }
+}
+
+
+

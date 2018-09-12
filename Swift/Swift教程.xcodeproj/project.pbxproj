@@ -14,6 +14,10 @@
 		2A176AE020EF45F00082271E /* FuncViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A176ADF20EF45F00082271E /* FuncViewController.swift */; };
 		2A255CE9211C3B8A00E58818 /* Project07-PickerViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A255CE8211C3B8A00E58818 /* Project07-PickerViewVC.swift */; };
 		2A255CEB211D78F300E58818 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A255CEA211D78F300E58818 /* PickerView.swift */; };
+		2A330DD72148B479009DF442 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A330DD62148B479009DF442 /* UIBarButtonItem+Extension.swift */; };
+		2A330DDE2148C611009DF442 /* 火@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A330DDC2148C611009DF442 /* 火@2x.png */; };
+		2A330DDF2148C611009DF442 /* 火(1)@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A330DDD2148C611009DF442 /* 火(1)@2x.png */; };
+		2A330DE12148F4E5009DF442 /* timg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A330DE02148F4E5009DF442 /* timg.jpg */; };
 		2A41779520EA1B520094D236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A41779420EA1B520094D236 /* AppDelegate.swift */; };
 		2A41779C20EA1B560094D236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A41779B20EA1B560094D236 /* Assets.xcassets */; };
 		2A41779F20EA1B560094D236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A41779D20EA1B560094D236 /* LaunchScreen.storyboard */; };
@@ -34,6 +38,8 @@
 		2A4EF0F520F361F000C834B9 /* ClassAndStructViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4EF0F420F361F000C834B9 /* ClassAndStructViewController.swift */; };
 		2A4EF0F720F5A8C700C834B9 /* InheritViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4EF0F620F5A8C700C834B9 /* InheritViewController.swift */; };
 		2A4EF0F920F885C600C834B9 /* ARCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4EF0F820F885C600C834B9 /* ARCViewController.swift */; };
+		2A5DF55121410FE100FE00A0 /* ProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DF55021410FE100FE00A0 /* ProgressCell.swift */; };
+		2A5DF5532141106500FE00A0 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DF5522141106500FE00A0 /* ProgressView.swift */; };
 		2A628E72210EE4860005373C /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A628E71210EE4860005373C /* BaseModel.swift */; };
 		2A628E74210EE50C0005373C /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A628E73210EE50C0005373C /* NewsModel.swift */; };
 		2A628E76210EE93E0005373C /* Project06-cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A628E75210EE93E0005373C /* Project06-cell.swift */; };
@@ -92,6 +98,10 @@
 		2A176ADF20EF45F00082271E /* FuncViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncViewController.swift; sourceTree = "<group>"; };
 		2A255CE8211C3B8A00E58818 /* Project07-PickerViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project07-PickerViewVC.swift"; sourceTree = "<group>"; };
 		2A255CEA211D78F300E58818 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		2A330DD62148B479009DF442 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
+		2A330DDC2148C611009DF442 /* 火@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火@2x.png"; sourceTree = "<group>"; };
+		2A330DDD2148C611009DF442 /* 火(1)@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火(1)@2x.png"; sourceTree = "<group>"; };
+		2A330DE02148F4E5009DF442 /* timg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpg; sourceTree = "<group>"; };
 		2A41779120EA1B520094D236 /* Swift教程.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift教程.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A41779420EA1B520094D236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A41779B20EA1B560094D236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,6 +128,8 @@
 		2A4EF0F420F361F000C834B9 /* ClassAndStructViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassAndStructViewController.swift; sourceTree = "<group>"; };
 		2A4EF0F620F5A8C700C834B9 /* InheritViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InheritViewController.swift; sourceTree = "<group>"; };
 		2A4EF0F820F885C600C834B9 /* ARCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCViewController.swift; sourceTree = "<group>"; };
+		2A5DF55021410FE100FE00A0 /* ProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCell.swift; sourceTree = "<group>"; };
+		2A5DF5522141106500FE00A0 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		2A628E71210EE4860005373C /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		2A628E73210EE50C0005373C /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		2A628E75210EE93E0005373C /* Project06-cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project06-cell.swift"; sourceTree = "<group>"; };
@@ -291,6 +303,9 @@
 		2A4177EA20EC61B60094D236 /* pic */ = {
 			isa = PBXGroup;
 			children = (
+				2A330DE02148F4E5009DF442 /* timg.jpg */,
+				2A330DDC2148C611009DF442 /* 火@2x.png */,
+				2A330DDD2148C611009DF442 /* 火(1)@2x.png */,
 				2AADBF2321226C5D00FE1F1F /* area.plist */,
 				2A7B24812101827900941127 /* Font */,
 				2A4177DC20EB58730094D236 /* app_selected@3x.png */,
@@ -332,6 +347,8 @@
 				2A7B24912101CAD300941127 /* Project03-Cell.xib */,
 				2A628E75210EE93E0005373C /* Project06-cell.swift */,
 				2A255CEA211D78F300E58818 /* PickerView.swift */,
+				2A5DF55021410FE100FE00A0 /* ProgressCell.swift */,
+				2A5DF5522141106500FE00A0 /* ProgressView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -340,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				2A7D1F792105CA9D00003645 /* UIColor+Hex.swift */,
+				2A330DD62148B479009DF442 /* UIBarButtonItem+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -514,8 +532,11 @@
 				2A4177E320EB59290094D236 /* other_unselected@3x.png in Resources */,
 				2A7B24932101CAD300941127 /* Project03-Cell.xib in Resources */,
 				2A4177DF20EB58740094D236 /* app_unselected@3x.png in Resources */,
+				2A330DDF2148C611009DF442 /* 火(1)@2x.png in Resources */,
 				2A41779F20EA1B560094D236 /* LaunchScreen.storyboard in Resources */,
 				2A7B24872101828E00941127 /* MFJinHei_Noncommercial-Regular.ttf in Resources */,
+				2A330DE12148F4E5009DF442 /* timg.jpg in Resources */,
+				2A330DDE2148C611009DF442 /* 火@2x.png in Resources */,
 				2A41779C20EA1B560094D236 /* Assets.xcassets in Resources */,
 				2A4177E520EB59BA0094D236 /* study_unselected@3x.png in Resources */,
 				2A7B24892101829B00941127 /* Gaspar Regular.otf in Resources */,
@@ -635,6 +656,7 @@
 			files = (
 				2A8B2D1D2137C85A00B26C30 /* Project08-AnimationOfVpnVC.swift in Sources */,
 				2A7D1F752105C41E00003645 /* BaseNavigationController.swift in Sources */,
+				2A330DD72148B479009DF442 /* UIBarButtonItem+Extension.swift in Sources */,
 				2A176AD920EC62AA0082271E /* Swift_BasicVC.swift in Sources */,
 				2A176ADC20EE0FAB0082271E /* StringAndCharVC.swift in Sources */,
 				2A4EF0F720F5A8C700C834B9 /* InheritViewController.swift in Sources */,
@@ -644,11 +666,13 @@
 				2A7D1F6F2105BD9800003645 /* BaseViewController.swift in Sources */,
 				2A4177D520EB1EEB0094D236 /* Swift_ViewController3.swift in Sources */,
 				2A7B247F2101811200941127 /* Project02-Cell.swift in Sources */,
+				2A5DF55121410FE100FE00A0 /* ProgressCell.swift in Sources */,
 				2A7D1F7A2105CA9D00003645 /* UIColor+Hex.swift in Sources */,
 				2A724A9A212118E2002B3BAE /* Project06-NetworkRequesrVC.swift in Sources */,
 				2A4177CF20EB10980094D236 /* Swift_ViewController1.swift in Sources */,
 				2A176ADE20EF10D60082271E /* SetViewController.swift in Sources */,
 				2A7B248C2101B0AF00941127 /* Project03-PlayLocalVedioVC.swift in Sources */,
+				2A5DF5532141106500FE00A0 /* ProgressView.swift in Sources */,
 				2A7B248F2101BB4C00941127 /* Swift教程.xcdatamodeld in Sources */,
 				2A628E76210EE93E0005373C /* Project06-cell.swift in Sources */,
 				2A7B247D2101741B00941127 /* Project02-CustomFontVC.swift in Sources */,
