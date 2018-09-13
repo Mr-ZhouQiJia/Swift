@@ -13,10 +13,10 @@ class Project08_AnimationOfVpnVC: BaseViewController , UITableViewDelegate , UIT
     var tableView : UITableView?
     var image : UIImageView?
     var angle = 0.0
-    var headerView : UIView?
     var label : UILabel?
     var button : UIButton?
     var backImage : UIImageView?
+    var offset : CGFloat = 0
     
     
     override func viewDidLoad() {
@@ -68,7 +68,7 @@ class Project08_AnimationOfVpnVC: BaseViewController , UITableViewDelegate , UIT
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 20
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -76,7 +76,7 @@ class Project08_AnimationOfVpnVC: BaseViewController , UITableViewDelegate , UIT
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 150
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -91,15 +91,30 @@ class Project08_AnimationOfVpnVC: BaseViewController , UITableViewDelegate , UIT
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset.y)
-        //print((image?.frame.origin.y)! - scrollView.contentOffset.y)
+        let offset = scrollView.contentOffset.y
+        var frame = self.backImage?.frame
+        print("\(self.offset) + \(offset)")
+        if self.offset > offset  {
+            print("向下")
+            
+            let x = self.offset - offset
+            frame = CGRect(x: -x, y: -x, width: self.view.frame.size.width +  x * 2, height: 240 + x * 2 )
+            self.backImage?.frame = frame!
+            if offset < -300 {
+                sleep(3)
+            }
+        }else if self.offset == 0{
+            return
+        }else{
+            print("向上")
+            
+         let y =   offset - self.offset
+         frame = CGRect(x: 0, y: -y, width: AppWidth, height: 240)
+            self.backImage?.frame = frame!
+        }
         
-        var imageX = image?.frame.origin.x
-       // imageX = scrollView.contentOffset.y
-       // image?.frame = CGRect(x: <#T##CGFloat#>, y: <#T##CGFloat#>, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
         
-       label?.center.y = 155.0 + scrollView.contentOffset.y
-        print(label?.frame as Any)
+        
     }
     
     
@@ -120,42 +135,38 @@ extension Project08_AnimationOfVpnVC {
     }
     
     func buildTableView()  {
-        self.tableView = UITableView(frame: CGRect(x: 0, y: 0, width: AppWidth, height: AppHeight), style: UITableViewStyle.plain)
+        self.tableView = UITableView(frame: CGRect(x: 0, y: 64, width: AppWidth, height: AppHeight), style: UITableViewStyle.plain)
         self.view.addSubview(self.tableView!)
         self.tableView?.delegate = self
         self.tableView?.dataSource = self
         // self.tableView?.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
         self.tableView?.register(ProgressCell.classForCoder(), forCellReuseIdentifier: "progressCell")
+        self.tableView?.contentInset = UIEdgeInsetsMake(240, 0, 0, 0)
+        self.offset = (self.tableView?.contentOffset.y)!
     }
     //创建头部视图
     func createHeaderView() {
-        headerView = UIView(frame: CGRect(x: 0, y: 0, width: AppWidth, height: 240))
-        
         backImage = UIImageView(frame: CGRect(x: 0, y: 0, width: AppWidth, height: 240))
         backImage?.image = UIImage(named: "timg.jpg")
-        
-        headerView?.backgroundColor = UIColor(red: 98/255.0, green: 197/255.0, blue: 248/255.0, alpha: 1.0)
         //图片
         image = UIImageView(image: UIImage.init(named: "123.jpg"))
-        headerView?.addSubview(image!)
+        backImage?.addSubview(image!)
         image!.snp.makeConstraints { (make) in
-            make.centerX.equalTo(headerView!)
-            make.top.equalTo(headerView!).offset(50)
+            make.centerX.equalTo(backImage!)
+            make.centerY.equalTo(backImage!)
+            //make.top.equalTo(backImage!).offset(50)
             make.height.width.equalTo(80)
         }
         image!.layer.masksToBounds = true
         image!.layer.cornerRadius = 40;
         
-        
-        
-        
         label = UILabel()
-        headerView?.addSubview(label!)
+        backImage?.addSubview(label!)
         label?.text = "SwiftSwift"
-        label?.textColor = UIColor.white
+        label?.textColor = UIColor.red
         label?.textAlignment = NSTextAlignment.center
         label?.snp.makeConstraints { (make) in
-            make.top.equalTo(image!.snp.bottom).offset(10)
+            make.top.equalTo(image!.snp.bottom).offset(5)
             make.centerX.equalTo(image!)
             make.width.equalTo(150)
             make.height.equalTo(30)
@@ -167,16 +178,16 @@ extension Project08_AnimationOfVpnVC {
         button?.titleLabel?.textColor = UIColor.blue
         button?.layer.masksToBounds = true
         button?.layer.cornerRadius = 5
-        headerView?.addSubview(button!)
+        backImage?.addSubview(button!)
         button?.snp.makeConstraints { (make) in
-            make.top.equalTo(label!.snp.bottom).offset(10)
+            make.top.equalTo(label!.snp.bottom).offset(5)
             make.width.equalTo(200)
             make.height.equalTo(30)
             make.centerX.equalTo(image!)
         }
         
         startAnimation()
-        self.tableView?.tableHeaderView = headerView
+        self.view.addSubview(backImage!)
     }
 }
 

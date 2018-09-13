@@ -17,7 +17,7 @@
 		2A330DD72148B479009DF442 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A330DD62148B479009DF442 /* UIBarButtonItem+Extension.swift */; };
 		2A330DDE2148C611009DF442 /* 火@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A330DDC2148C611009DF442 /* 火@2x.png */; };
 		2A330DDF2148C611009DF442 /* 火(1)@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A330DDD2148C611009DF442 /* 火(1)@2x.png */; };
-		2A330DE12148F4E5009DF442 /* timg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A330DE02148F4E5009DF442 /* timg.jpg */; };
+		2A330DE32149F901009DF442 /* timg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A330DE22149F901009DF442 /* timg.jpg */; };
 		2A41779520EA1B520094D236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A41779420EA1B520094D236 /* AppDelegate.swift */; };
 		2A41779C20EA1B560094D236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A41779B20EA1B560094D236 /* Assets.xcassets */; };
 		2A41779F20EA1B560094D236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A41779D20EA1B560094D236 /* LaunchScreen.storyboard */; };
@@ -101,7 +101,7 @@
 		2A330DD62148B479009DF442 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		2A330DDC2148C611009DF442 /* 火@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火@2x.png"; sourceTree = "<group>"; };
 		2A330DDD2148C611009DF442 /* 火(1)@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火(1)@2x.png"; sourceTree = "<group>"; };
-		2A330DE02148F4E5009DF442 /* timg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpg; sourceTree = "<group>"; };
+		2A330DE22149F901009DF442 /* timg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpg; sourceTree = "<group>"; };
 		2A41779120EA1B520094D236 /* Swift教程.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift教程.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A41779420EA1B520094D236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A41779B20EA1B560094D236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -303,7 +303,7 @@
 		2A4177EA20EC61B60094D236 /* pic */ = {
 			isa = PBXGroup;
 			children = (
-				2A330DE02148F4E5009DF442 /* timg.jpg */,
+				2A330DE22149F901009DF442 /* timg.jpg */,
 				2A330DDC2148C611009DF442 /* 火@2x.png */,
 				2A330DDD2148C611009DF442 /* 火(1)@2x.png */,
 				2AADBF2321226C5D00FE1F1F /* area.plist */,
@@ -535,7 +535,7 @@
 				2A330DDF2148C611009DF442 /* 火(1)@2x.png in Resources */,
 				2A41779F20EA1B560094D236 /* LaunchScreen.storyboard in Resources */,
 				2A7B24872101828E00941127 /* MFJinHei_Noncommercial-Regular.ttf in Resources */,
-				2A330DE12148F4E5009DF442 /* timg.jpg in Resources */,
+				2A330DE32149F901009DF442 /* timg.jpg in Resources */,
 				2A330DDE2148C611009DF442 /* 火@2x.png in Resources */,
 				2A41779C20EA1B560094D236 /* Assets.xcassets in Resources */,
 				2A4177E520EB59BA0094D236 /* study_unselected@3x.png in Resources */,
