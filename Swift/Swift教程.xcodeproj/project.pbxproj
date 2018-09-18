@@ -18,6 +18,8 @@
 		2A330DDE2148C611009DF442 /* 火@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A330DDC2148C611009DF442 /* 火@2x.png */; };
 		2A330DDF2148C611009DF442 /* 火(1)@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A330DDD2148C611009DF442 /* 火(1)@2x.png */; };
 		2A330DE32149F901009DF442 /* timg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A330DE22149F901009DF442 /* timg.jpg */; };
+		2A330DE6214B9EC2009DF442 /* bg_sun@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A330DE4214B9EC1009DF442 /* bg_sun@2x.png */; };
+		2A330DE7214B9EC2009DF442 /* bg_sun@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A330DE5214B9EC2009DF442 /* bg_sun@3x.png */; };
 		2A41779520EA1B520094D236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A41779420EA1B520094D236 /* AppDelegate.swift */; };
 		2A41779C20EA1B560094D236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A41779B20EA1B560094D236 /* Assets.xcassets */; };
 		2A41779F20EA1B560094D236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A41779D20EA1B560094D236 /* LaunchScreen.storyboard */; };
@@ -102,6 +104,8 @@
 		2A330DDC2148C611009DF442 /* 火@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火@2x.png"; sourceTree = "<group>"; };
 		2A330DDD2148C611009DF442 /* 火(1)@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "火(1)@2x.png"; sourceTree = "<group>"; };
 		2A330DE22149F901009DF442 /* timg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpg; sourceTree = "<group>"; };
+		2A330DE4214B9EC1009DF442 /* bg_sun@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_sun@2x.png"; sourceTree = "<group>"; };
+		2A330DE5214B9EC2009DF442 /* bg_sun@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg_sun@3x.png"; sourceTree = "<group>"; };
 		2A41779120EA1B520094D236 /* Swift教程.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift教程.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A41779420EA1B520094D236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A41779B20EA1B560094D236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -303,6 +307,8 @@
 		2A4177EA20EC61B60094D236 /* pic */ = {
 			isa = PBXGroup;
 			children = (
+				2A330DE4214B9EC1009DF442 /* bg_sun@2x.png */,
+				2A330DE5214B9EC2009DF442 /* bg_sun@3x.png */,
 				2A330DE22149F901009DF442 /* timg.jpg */,
 				2A330DDC2148C611009DF442 /* 火@2x.png */,
 				2A330DDD2148C611009DF442 /* 火(1)@2x.png */,
@@ -531,11 +537,13 @@
 				2A4177C320EA254E0094D236 /* 123.jpg in Resources */,
 				2A4177E320EB59290094D236 /* other_unselected@3x.png in Resources */,
 				2A7B24932101CAD300941127 /* Project03-Cell.xib in Resources */,
+				2A330DE7214B9EC2009DF442 /* bg_sun@3x.png in Resources */,
 				2A4177DF20EB58740094D236 /* app_unselected@3x.png in Resources */,
 				2A330DDF2148C611009DF442 /* 火(1)@2x.png in Resources */,
 				2A41779F20EA1B560094D236 /* LaunchScreen.storyboard in Resources */,
 				2A7B24872101828E00941127 /* MFJinHei_Noncommercial-Regular.ttf in Resources */,
 				2A330DE32149F901009DF442 /* timg.jpg in Resources */,
+				2A330DE6214B9EC2009DF442 /* bg_sun@2x.png in Resources */,
 				2A330DDE2148C611009DF442 /* 火@2x.png in Resources */,
 				2A41779C20EA1B560094D236 /* Assets.xcassets in Resources */,
 				2A4177E520EB59BA0094D236 /* study_unselected@3x.png in Resources */,
@@ -862,6 +870,7 @@
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				INFOPLIST_FILE = "Swift教程/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -884,6 +893,7 @@
 				GCC_PREFIX_HEADER = "";
 				HEADER_SEARCH_PATHS = "$(SRCROOT)/**";
 				INFOPLIST_FILE = "Swift教程/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

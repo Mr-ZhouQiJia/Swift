@@ -13,7 +13,7 @@ class ProgressView: UIView {
     /**
      进度条背景颜色
      */
-    private var progressBackcolor : UIColor? = UIColor()
+   // private var progressBackcolor : UIColor? = UIColor()
     var progressBackColor : UIColor?
 //    {
 //        set{
@@ -28,7 +28,7 @@ class ProgressView: UIView {
     /**
      进度条颜色
      */
-    private var progressviewColor : UIColor? = UIColor()
+  //  private var progressviewColor : UIColor? = UIColor()
     var progressViewColor : UIColor?
 //    {
 //        set{
@@ -43,7 +43,7 @@ class ProgressView: UIView {
     /**
      进度
      */
-    private var progressvalue : CGFloat? = CGFloat()
+//    private var progressvalue : CGFloat? = CGFloat()
     var progressValue : CGFloat?
 //    {
 //        set{
@@ -83,22 +83,29 @@ class ProgressView: UIView {
     }
     
     func buildUI(){
+       // self.backgroundColor = UIColor.yellow
         
-        self.bottonView = UIView(frame: self.bounds)
-        self.bottonView?.backgroundColor = UIColor.lightGray
-        self.bottonView?.layer.masksToBounds = true
-        self.bottonView?.layer.cornerRadius = 3
-        self.addSubview(self.bottonView!)
         
        // self.progressView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: (bottonView?.frame.size.height)!))
         
+        
+    }
+    
+    override func layoutSubviews() {
+        self.bottonView = UIView(frame: self.bounds)
+        
+        self.addSubview(self.bottonView!)
+        self.bottonView?.backgroundColor = UIColor.lightGray
+        self.bottonView?.layer.masksToBounds = true
+        self.bottonView?.layer.cornerRadius = 3
         self.progressView = UIView()
+        
+        self.bottonView?.addSubview(self.progressView!)
         self.progressValue = 0.8
         self.progressView?.frame = CGRect(x: (self.progressView?.frame.origin.x)!, y: (self.progressView?.frame.origin.y)!, width: (self.bottonView?.frame.size.width)! * progressValue!, height: (self.progressView?.frame.size.height)!)
         self.progressView?.backgroundColor = UIColor.red
         self.progressView?.layer.masksToBounds = true
         self.progressView?.layer.cornerRadius = 3
-        self.bottonView?.addSubview(self.progressView!)
     }
     
 }

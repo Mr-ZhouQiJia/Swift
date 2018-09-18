@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 
+@available(iOS 9.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -199,6 +200,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    @available(iOS 9.0, *)
     func  application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         
         guard let tabBar = self.window?.rootViewController as? UITabBarController else {

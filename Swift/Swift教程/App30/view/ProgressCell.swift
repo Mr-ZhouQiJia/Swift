@@ -29,7 +29,7 @@ class ProgressCell: UITableViewCell {
             make.height.equalTo(30)
             make.width.equalTo(200)
         }
-        
+        progressView?.bottonView?.backgroundColor = UIColor.red
         titleLabel = UILabel()
         self.contentView.addSubview(titleLabel!)
         titleLabel?.snp.makeConstraints { (make) in
