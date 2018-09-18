@@ -21,12 +21,12 @@ class ProgressCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        progressView = ProgressView()
+        progressView = ProgressView(progressBackColor: UIColor.lightGray, progressViewColor: UIColor.red, progressValue: 0.7)
         self.contentView.addSubview(progressView!)
         progressView?.snp.makeConstraints { (make) in
             make.top.equalTo(self.contentView).offset(20)
             make.right.equalTo(self.contentView).offset(-16)
-            make.height.equalTo(30)
+            make.height.equalTo(10)
             make.width.equalTo(200)
         }
         progressView?.bottonView?.backgroundColor = UIColor.red

@@ -85,9 +85,6 @@ class Project08_AnimationOfVpnVC: BaseViewController , UITableViewDelegate , UIT
         let cell = tableView.dequeueReusableCell(withIdentifier: "progressCell", for: indexPath) as! ProgressCell
        // cell.backgroundColor = .red
         //cell.textLabel?.text = "来试一下啊!"
-        cell.progressView?.progressBackColor = UIColor.gray
-        cell.progressView?.progressViewColor = UIColor.red
-        cell.progressView?.progressValue = 0.8
         cell.titleLabel?.text = "进度:"
         cell.progressValue?.text = "80%"
         return cell
