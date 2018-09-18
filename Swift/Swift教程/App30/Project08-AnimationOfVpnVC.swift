@@ -209,6 +209,7 @@ extension Project08_AnimationOfVpnVC {
         //图片
         image = UIImageView(image: UIImage.init(named: "123.jpg"))
         backImage?.addSubview(image!)
+        let a = 10
         image!.snp.makeConstraints { (make) in
             make.centerX.equalTo(backImage!)
             make.centerY.equalTo(backImage!)
