@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Project09-Cell" id="gTV-IL-0wX" customClass="Project09_Cell" customModule="Swift教程" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="132" height="145"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="132" height="145"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="123.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NIC-PK-l6V">
+                        <rect key="frame" x="0.0" y="0.0" width="132" height="111"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="111" id="CQZ-DW-idS"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lK-EG-eew">
+                        <rect key="frame" x="0.0" y="111" width="132" height="34"/>
+                        <color key="backgroundColor" red="0.81835700330000005" green="0.7466561265402617" blue="0.65842030668193774" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" title="点我"/>
+                        <connections>
+                            <action selector="clickButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="opz-Om-qDz"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.81835700330000005" green="0.81835700330000005" blue="0.81835700330000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="4lK-EG-eew" firstAttribute="top" secondItem="NIC-PK-l6V" secondAttribute="bottom" id="G3x-CG-unw"/>
+                <constraint firstAttribute="bottom" secondItem="4lK-EG-eew" secondAttribute="bottom" id="HfS-mg-6Mf"/>
+                <constraint firstItem="NIC-PK-l6V" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OUT-fI-dwU"/>
+                <constraint firstAttribute="trailing" secondItem="4lK-EG-eew" secondAttribute="trailing" id="Y9r-uw-r0R"/>
+                <constraint firstItem="NIC-PK-l6V" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="jz3-cY-aKQ"/>
+                <constraint firstItem="4lK-EG-eew" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="r1G-Sg-TJh"/>
+                <constraint firstAttribute="trailing" secondItem="NIC-PK-l6V" secondAttribute="trailing" id="x9C-ak-reg"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="132" height="145"/>
+            <connections>
+                <outlet property="button" destination="4lK-EG-eew" id="HIt-n3-Xr4"/>
+                <outlet property="imageV" destination="NIC-PK-l6V" id="iKY-q9-vtl"/>
+            </connections>
+            <point key="canvasLocation" x="198.40000000000001" y="156.97151424287858"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="123.jpg" width="128" height="128"/>
+    </resources>
+</document>

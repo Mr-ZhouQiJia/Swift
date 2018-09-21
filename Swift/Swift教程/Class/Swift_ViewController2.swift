@@ -24,7 +24,7 @@ class Swift_ViewController2: UIViewController ,UITableViewDelegate,UITableViewDa
         self.tableview?.dataSource = self
         self.tableview?.register(UITableViewCell.self, forCellReuseIdentifier: "myCell")
         self.view.addSubview(self.tableview!)
-        self.array = ["Project01-SimpleStopWatchVC","Project02-CustomFontVC","Project03-PlayLocalVedioVC","Project04-PictureScrollerVC","Project05-AlamofireVC","Project06-NetworkRequesrVC","Project07-PickerViewVC","Project08-AnimationOfVpnVC"]
+        self.array = ["Project01-SimpleStopWatchVC","Project02-CustomFontVC","Project03-PlayLocalVedioVC","Project04-PictureScrollerVC","Project05-AlamofireVC","Project06-NetworkRequesrVC","Project07-PickerViewVC","Project08-AnimationOfVpnVC","Project09-BlockDemoVC"]
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {

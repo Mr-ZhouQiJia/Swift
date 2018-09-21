@@ -40,6 +40,9 @@
 		2A4EF0F520F361F000C834B9 /* ClassAndStructViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4EF0F420F361F000C834B9 /* ClassAndStructViewController.swift */; };
 		2A4EF0F720F5A8C700C834B9 /* InheritViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4EF0F620F5A8C700C834B9 /* InheritViewController.swift */; };
 		2A4EF0F920F885C600C834B9 /* ARCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4EF0F820F885C600C834B9 /* ARCViewController.swift */; };
+		2A59504D2151E9C0003E9B33 /* Project09-BlockDemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A59504C2151E9C0003E9B33 /* Project09-BlockDemoVC.swift */; };
+		2A5950502151EEB0003E9B33 /* Project09-Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A59504E2151EEB0003E9B33 /* Project09-Cell.swift */; };
+		2A5950512151EEB0003E9B33 /* Project09-Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A59504F2151EEB0003E9B33 /* Project09-Cell.xib */; };
 		2A5DF55121410FE100FE00A0 /* ProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DF55021410FE100FE00A0 /* ProgressCell.swift */; };
 		2A5DF5532141106500FE00A0 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5DF5522141106500FE00A0 /* ProgressView.swift */; };
 		2A628E72210EE4860005373C /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A628E71210EE4860005373C /* BaseModel.swift */; };
@@ -132,6 +135,9 @@
 		2A4EF0F420F361F000C834B9 /* ClassAndStructViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassAndStructViewController.swift; sourceTree = "<group>"; };
 		2A4EF0F620F5A8C700C834B9 /* InheritViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InheritViewController.swift; sourceTree = "<group>"; };
 		2A4EF0F820F885C600C834B9 /* ARCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARCViewController.swift; sourceTree = "<group>"; };
+		2A59504C2151E9C0003E9B33 /* Project09-BlockDemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project09-BlockDemoVC.swift"; sourceTree = "<group>"; };
+		2A59504E2151EEB0003E9B33 /* Project09-Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project09-Cell.swift"; sourceTree = "<group>"; };
+		2A59504F2151EEB0003E9B33 /* Project09-Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "Project09-Cell.xib"; sourceTree = "<group>"; };
 		2A5DF55021410FE100FE00A0 /* ProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCell.swift; sourceTree = "<group>"; };
 		2A5DF5522141106500FE00A0 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		2A628E71210EE4860005373C /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
@@ -355,6 +361,8 @@
 				2A255CEA211D78F300E58818 /* PickerView.swift */,
 				2A5DF55021410FE100FE00A0 /* ProgressCell.swift */,
 				2A5DF5522141106500FE00A0 /* ProgressView.swift */,
+				2A59504E2151EEB0003E9B33 /* Project09-Cell.swift */,
+				2A59504F2151EEB0003E9B33 /* Project09-Cell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -390,6 +398,7 @@
 				2A724A99212118E2002B3BAE /* Project06-NetworkRequesrVC.swift */,
 				2A255CE8211C3B8A00E58818 /* Project07-PickerViewVC.swift */,
 				2A8B2D1C2137C85A00B26C30 /* Project08-AnimationOfVpnVC.swift */,
+				2A59504C2151E9C0003E9B33 /* Project09-BlockDemoVC.swift */,
 				2A7B248A210182FD00941127 /* view */,
 			);
 			path = App30;
@@ -538,6 +547,7 @@
 				2A4177E320EB59290094D236 /* other_unselected@3x.png in Resources */,
 				2A7B24932101CAD300941127 /* Project03-Cell.xib in Resources */,
 				2A330DE7214B9EC2009DF442 /* bg_sun@3x.png in Resources */,
+				2A5950512151EEB0003E9B33 /* Project09-Cell.xib in Resources */,
 				2A4177DF20EB58740094D236 /* app_unselected@3x.png in Resources */,
 				2A330DDF2148C611009DF442 /* 火(1)@2x.png in Resources */,
 				2A41779F20EA1B560094D236 /* LaunchScreen.storyboard in Resources */,
@@ -683,6 +693,7 @@
 				2A5DF5532141106500FE00A0 /* ProgressView.swift in Sources */,
 				2A7B248F2101BB4C00941127 /* Swift教程.xcdatamodeld in Sources */,
 				2A628E76210EE93E0005373C /* Project06-cell.swift in Sources */,
+				2A5950502151EEB0003E9B33 /* Project09-Cell.swift in Sources */,
 				2A7B247D2101741B00941127 /* Project02-CustomFontVC.swift in Sources */,
 				2A41779520EA1B520094D236 /* AppDelegate.swift in Sources */,
 				2A7D1F7C2106BF2C00003645 /* ThreadViewController.swift in Sources */,
@@ -690,6 +701,7 @@
 				2A176AE020EF45F00082271E /* FuncViewController.swift in Sources */,
 				2A7D1F732105BDDA00003645 /* BaseTableViewCell.swift in Sources */,
 				2ACA7FCB20FEEA570015D5C6 /* File.swift in Sources */,
+				2A59504D2151E9C0003E9B33 /* Project09-BlockDemoVC.swift in Sources */,
 				2A724A98212118B4002B3BAE /* Project05-AlamofireVC.swift in Sources */,
 				2A628E72210EE4860005373C /* BaseModel.swift in Sources */,
 				2A628E74210EE50C0005373C /* NewsModel.swift in Sources */,
