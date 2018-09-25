@@ -1,5 +1,8 @@
 PODS:
   - Alamofire (4.7.2)
+  - JCore (1.1.9)
+  - JPush (3.0.9):
+    - JCore (~> 1.1.7)
   - Kingfisher (4.7.0)
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
@@ -9,6 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.7.2)
+  - JPush (~> 3.0.9)
   - Kingfisher (~> 4.7.0)
   - SDWebImage (~> 4.3.3)
   - SnapKit (~> 4.0.0)
@@ -17,6 +21,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - JCore
+    - JPush
     - Kingfisher
     - SDWebImage
     - SnapKit
@@ -24,11 +30,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  JCore: 27598485098d0db99d2812cba048003457d08cfb
+  JPush: 003d9eaef8ba2df76de32573d0c8aa62b92b3c82
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 599c4f4a58520297b756c50f58275f04a4e018e1
+PODFILE CHECKSUM: 33195f5d15d88cf5d02d0a6bb38baca3af12fda4
 
 COCOAPODS: 1.5.0

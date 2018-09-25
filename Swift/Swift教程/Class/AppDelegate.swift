@@ -12,8 +12,13 @@ import CoreData
 
 @available(iOS 9.0, *)
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
 
+class AppDelegate: UIResponder, UIApplicationDelegate,JPUSHRegisterDelegate {
+    
+    
+    let appKey = "a77828004ee25605b6cad6ca"
+    let channel = "appStore"
+    
     var window: UIWindow?
     var view : UIView?
     
@@ -26,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let selectedImage = ["study_selected","app_selected","other_selected"]
         let unselectedImage = ["study_unselected","app_unselected","other_unselected"]
         
-        
+    
         
         for index in 1...3 {
             //  使用NSClassFromString时，需要在类名前加上项目名称
@@ -73,6 +78,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.shared.shortcutItems = [homeItem,item2,item3]
         
+        //MARK:- 集成极光推送
+        jPushSet(launchOptions: launchOptions)
         
         
         
@@ -80,6 +87,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+     //MARK:- 集成极光推送
+    func jPushSet(launchOptions : [UIApplicationLaunchOptionsKey: Any]? )  {
+        let entity =  JPUSHRegisterEntity()
+        entity.types = Int(JPAuthorizationOptions.alert.rawValue) | Int(Float(JPAuthorizationOptions.alert.rawValue)) | Int(Float(JPAuthorizationOptions.sound.rawValue))
+        JPUSHService.register(forRemoteNotificationConfig: entity, delegate: self)
+        
+        let advertisingID = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+        JPUSHService.setup(withOption: launchOptions, appKey: appKey, channel: channel, apsForProduction: false , advertisingIdentifier: advertisingID)
+        
+        
+    }
+    
     //获取屏幕上显示的viewcontroller
     
     func getCurrentVC() -> UIViewController {
@@ -219,6 +238,75 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tabBar.selectedIndex = 2
         }
         
+        
+        
+    }
+    
+    //MARK:- JPUSHDelegate
+    // 接受推送通知(前台)
+    func jpushNotificationCenter(_ center: UNUserNotificationCenter!, willPresent notification: UNNotification!, withCompletionHandler completionHandler: ((Int) -> Void)!) {
+        
+        let userInfo = notification.request.content.userInfo
+        print("前台:\(userInfo)")
+        if notification.request.trigger is UNPushNotificationTrigger {
+            JPUSHService.handleRemoteNotification(userInfo)
+        }
+        // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以选择设置
+        completionHandler(Int(UNNotificationPresentationOptions.alert.rawValue)|Int(UNNotificationPresentationOptions.badge.rawValue) )
+        
+      
+    }
+    
+    // 接受推送通知(后台)
+    func jpushNotificationCenter(_ center: UNUserNotificationCenter!, didReceive response: UNNotificationResponse!, withCompletionHandler completionHandler: (() -> Void)!) {
+        let userInfo = response.notification.request.content.userInfo
+        print("后台:\(userInfo)")
+        if response.notification.request.trigger is UNPushNotificationTrigger {
+            JPUSHService.handleRemoteNotification(userInfo)
+        }
+        // 系统要求执行这个方法
+        completionHandler()
+        receiveRemotePush(userInfo: userInfo as! Dictionary<String , Any>)
+        
+    }
+    
+    //注册apns成功接口
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        JPUSHService.registerDeviceToken(deviceToken)
+    }
+    
+    //注册apns失败调用方法
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        
+    }
+    
+    //收到通知
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        JPUSHService.handleRemoteNotification(userInfo)
+        completionHandler(UIBackgroundFetchResult.newData)
+        
+        print(userInfo)
+        
+    }
+    
+    //接收推送处理
+    func receiveRemotePush(userInfo :Dictionary<String, Any>  )  {
+        print(userInfo)
+        let action = userInfo["action"] as! String
+        let url = userInfo["url"] as! String
+        
+        if action == "1" {
+            let vc = RemotePushWebVCViewController()
+            vc.url = url as NSString
+            let navi = BaseNavigationController.init(rootViewController: vc)
+            self.window?.rootViewController?.present(navi, animated: true, completion: nil)
+            
+            
+        } else if action == "2"{
+            
+        }else if action == "3" {
+            
+        }
         
         
     }

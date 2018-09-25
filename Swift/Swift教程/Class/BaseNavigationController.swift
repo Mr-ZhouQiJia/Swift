@@ -15,9 +15,26 @@ class BaseNavigationController: UINavigationController {
         self.navigationBar.barTintColor = UIColor.white
         
         self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white , NSAttributedStringKey.font : UIFont.systemFont(ofSize: 20)]
-        
-    
+        buildBackItem()
     }
+    
+    //创建导航栏返回按钮
+    func buildBackItem()  {
+        let backButton = UIButton(type: UIButtonType.custom)
+        backButton.frame = CGRect(x: 0, y: 0, width: 88, height: 49)
+        backButton.setImage(UIImage(named: "返回"), for: UIControlState.normal)
+        backButton.addTarget(self, action: #selector(back), for: UIControlEvents.touchUpInside)
+        let left = UIBarButtonItem(customView: backButton )
+        self.navigationItem.leftBarButtonItem = left
+        
+        
+    }
+    
+    @objc func back() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
