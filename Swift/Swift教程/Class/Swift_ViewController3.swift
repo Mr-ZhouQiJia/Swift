@@ -18,7 +18,7 @@ class Swift_ViewController3: UIViewController ,UITableViewDelegate,UITableViewDa
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         
-        self.title = "30App"
+        self.navigationItem.title = "30App"
         self.tableview = UITableView(frame: UIScreen.main.bounds, style: UITableViewStyle.plain)
         self.tableview?.delegate = self
         self.tableview?.dataSource = self
@@ -56,7 +56,7 @@ class Swift_ViewController3: UIViewController ,UITableViewDelegate,UITableViewDa
         
         let viewC = NSClassFromString(className)! as! UIViewController.Type
         let vc = viewC.init() //初始化
-        vc.title = className
+        vc.title = self.array![indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

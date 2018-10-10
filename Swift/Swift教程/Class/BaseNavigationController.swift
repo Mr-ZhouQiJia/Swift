@@ -12,16 +12,17 @@ class BaseNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationBar.barTintColor = UIColor.white
+        self.navigationBar.barTintColor = UIColor(hexString: "#f80614")
         
         self.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white , NSAttributedStringKey.font : UIFont.systemFont(ofSize: 20)]
-        buildBackItem()
+        self.navigationBar.tintColor = UIColor.white
+      //  buildBackItem()
     }
     
     //创建导航栏返回按钮
     func buildBackItem()  {
         let backButton = UIButton(type: UIButtonType.custom)
-        backButton.frame = CGRect(x: 0, y: 0, width: 88, height: 49)
+        backButton.frame = CGRect(x: 0, y: 0, width: 22, height: 49)
         backButton.setImage(UIImage(named: "返回"), for: UIControlState.normal)
         backButton.addTarget(self, action: #selector(back), for: UIControlEvents.touchUpInside)
         let left = UIBarButtonItem(customView: backButton )

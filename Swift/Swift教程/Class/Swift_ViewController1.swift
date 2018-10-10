@@ -14,7 +14,7 @@ class Swift_ViewController1: UIViewController,UITableViewDelegate,UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Swift基础"
+        self.navigationItem.title = "Swift基础"
         tableView = UITableView(frame: UIScreen.main.bounds)
         self.tableView.backgroundColor = UIColor.white
         self.tableView.delegate = self

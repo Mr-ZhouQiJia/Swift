@@ -17,6 +17,7 @@ class RemotePushWebVCViewController: BaseViewController,UIWebViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "推送直达页"
         self.webView = UIWebView(frame: CGRect(x: 0, y: 0, width: AppWidth, height: AppHeight))
         self.view.addSubview(self.webView!)
         if url != nil{
@@ -25,9 +26,20 @@ class RemotePushWebVCViewController: BaseViewController,UIWebViewDelegate {
             self.webView?.loadRequest(URLRequest(url: URL(string:"https://www.baidu.com/index.php?tn=monline_3_dg")!))
         }
         
-        
+        let shareBtn = UIBarButtonItem(image: UIImage(named: "分享"), style: UIBarButtonItemStyle.done, target: self, action: #selector(share))
+        self.navigationItem.rightBarButtonItem = shareBtn
     }
     
+    @objc func share() {
+   // UMSocialUIManager.setPreDefinePlatforms([UMSocialPlatformType.QQ])
+        UMSocialUIManager.showShareMenuViewInWindow { (platformType, userInfo) in
+            let messageObject : UMSocialMessageObject = UMSocialMessageObject.init()
+            messageObject.text = "test"
+            
+        }
+        
+        
+    }
 
     /*
     // MARK: - Navigation

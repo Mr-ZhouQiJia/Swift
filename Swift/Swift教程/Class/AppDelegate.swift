@@ -21,11 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,JPUSHRegisterDelegate {
     
     var window: UIWindow?
     var view : UIView?
-    
+    let tabar = UITabBarController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         print(AppHeight,AppWidth)
-        let tabar = UITabBarController()
         
         let title : Array = ["Swift学习","SwiftDemo","其它"]
         let selectedImage = ["study_selected","app_selected","other_selected"]
@@ -81,12 +80,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate,JPUSHRegisterDelegate {
         //MARK:- 集成极光推送
         jPushSet(launchOptions: launchOptions)
         
-        
-        
+        //MARK:- 集成友盟分享
+        configUSharePlatforms()
 
         return true
     }
 
+   
      //MARK:- 集成极光推送
     func jPushSet(launchOptions : [UIApplicationLaunchOptionsKey: Any]? )  {
         let entity =  JPUSHRegisterEntity()
@@ -129,7 +129,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,JPUSHRegisterDelegate {
         
     }
     
-    
     //截取当前屏幕的图片
     func snapshot(view : UIView) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(view.bounds.size, true, 0)
@@ -139,12 +138,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,JPUSHRegisterDelegate {
         return image
         
     }
-    
-    
-    
-    
-    
-    
+  
     func applicationWillResignActive(_ application: UIApplication) {
        
         view = UIView.init(frame: UIScreen.main.bounds)
@@ -296,11 +290,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,JPUSHRegisterDelegate {
         let url = userInfo["url"] as! String
         
         if action == "1" {
+            let navi = self.getRootViewController()
             let vc = RemotePushWebVCViewController()
             vc.url = url as NSString
-            let navi = BaseNavigationController.init(rootViewController: vc)
-            self.window?.rootViewController?.present(navi, animated: true, completion: nil)
-            
+            navi.pushViewController(vc, animated: true)
             
         } else if action == "2"{
             
@@ -311,6 +304,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate,JPUSHRegisterDelegate {
         
     }
     
+    //获取当前页面的控制器
+    func getRootViewController() -> UINavigationController {
+
+        let rootViewController = UIApplication.shared.keyWindow?.rootViewController
+        if (rootViewController?.isKind(of: UITabBarController.self))! {
+            let firstController = tabar.selectedViewController
+            if (firstController?.isKind(of: UINavigationController.self))!{
+                return firstController as! BaseNavigationController
+            }else{
+                return UINavigationController(rootViewController: firstController!)
+            }
+            
+        }else if ( rootViewController?.isKind(of: UINavigationController.self))!{
+            return rootViewController as! BaseNavigationController
+        }
+
+        return UINavigationController(rootViewController:rootViewController!)
+    }
     
+    //MARK:- 集成分享
+    func configUSharePlatforms()  {
+        
+        UMConfigure.initWithAppkey("5bad9f3ff1f556df51000287", channel: "app store")
+        UMSocialManager.default()?.setPlaform(.wechatSession, appKey: "", appSecret: "", redirectURL:" http://mobile.umeng.com/social")
+        UMSocialManager.default()?.setPlaform(.QQ, appKey: "1107874064", appSecret: "6fo3dqJQpRCNeg98", redirectURL:" http://mobile.umeng.com/social")
+        UMSocialManager.default()?.setPlaform(.sina, appKey: "3560192699", appSecret: "74ffbf0b3b9a150dfb9da37fda90bd19", redirectURL:" http://mobile.umeng.com/social")
+    }
+    
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        let result = UMSocialManager.default()?.handleOpen(url)
+        if  !result! {
+            
+        }
+        return result!
+        
+    }
 }
 
